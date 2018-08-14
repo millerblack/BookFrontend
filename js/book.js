@@ -6,7 +6,7 @@ $(document).ready(function(){
                 var tmp_td_book_name=$('<td></td>').text(item.book_name);
                 var tmp_td_book_author=$('<td></td>').text(item.book_author);
                 var tmp_td_button=$('<td></td>');
-		var tmp_button=$('<button type="button" style="border-radius: 0px;" class="btn btn-default col-md-6">delete</button>');
+		var tmp_button=$('<button type="button" style="border-radius: 0px;" class="btn btn-default col-md-6" formmethod="post"><a href="/book/delete/' + item.book_id + '/">delete</a></button>');
 		tmp_td_button.append(tmp_button)
 		tmp_tr.append(tmp_td_book_id)
 		tmp_tr.append(tmp_td_book_name)
@@ -17,6 +17,11 @@ $(document).ready(function(){
         });
 })
 
+
+function deleteBook(element){
+    alert(element.id)
+    var tmp_button=$('<button type="button" onclick="deleteBook(this)" style="border-radius: 0px;" class="btn btn-default col-md-6" formmethod="post" formaction="book/delete/' + item.book_id +'">delete</button>');
+}
 
 function showClassmates(result){
     $("#btn-group-vertical-classmates").empty();
