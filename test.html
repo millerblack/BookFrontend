@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -8,7 +9,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static "book/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,31 +63,7 @@
                         <th>operation</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                    <div class="col-md-12" role="group" aria-label="..." id="book_item">
-                        <td class="col-md-2">1</td>
-                        <td class="col-md-4">Arsenal</td>
-                        <td class="col-md-4">Arsene</td>
-                        <td class="col-md-2"><button type="button" style="border-radius: 0px;" class="btn btn-default col-md-6">delete</button></td>
-                    </div>
-                    </tr>
-                    <tr>
-                    <div class="col-md-12" role="group" aria-label="..." id="book_item">
-                        <td class="col-md-2">2</td>
-                        <td class="col-md-4">ACMilan</td>
-                        <td class="col-md-4">Kaka</td>
-                        <td class="col-md-2"><button type="button" style="border-radius: 0px;" class="btn btn-default col-md-6">delete</button></td>
-                    </div>
-                    </tr>
-                    <tr>
-                    <div class="col-md-12" role="group" aria-label="..." id="book_item">
-                        <td class="col-md-2">3</td>
-                        <td class="col-md-4">RealMadrid</td>
-                        <td class="col-md-4">C.Ronaldo</td>
-                        <td class="col-md-2"><button type="button" style="border-radius: 0px;" class="btn btn-default col-md-6">delete</button></td>
-                    </div>
-                    </tr>
+                <tbody id="book_table">
                 </tbody>
             </table>
             <div class="btn-group-lg col-md-4" role="group" aria-label="..." id="btn-group-vertical-book_id">
@@ -112,8 +89,9 @@
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="jquery/jquery-1.12.4.min.js"></script>
+    <script src="{% static "book/jquery/jquery-1.12.4.min.js" %}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="{% static "book/bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "book/js/book.js" %}"></script>
   </body>
 </html>
