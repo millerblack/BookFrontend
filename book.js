@@ -19,7 +19,9 @@ $(document).ready(function(){
 
 
 function deleteBook(element){
-    $.get("/book/delete/" + element.id)
+    $.getJSON("/book/delete/" + element.id, function(data){
+        alert(data.status);
+    });
     element.parentNode.parentNode.remove();
 }
 
